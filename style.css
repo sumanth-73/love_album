@@ -1,0 +1,82 @@
+/* Basic styles for layout and appearance */
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5f8;
+    background-image: url('https://www.pexels.com/photo/silhouette-of-man-and-woman-kissing-1024975/'); /* Love symbols background */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #ff6f91;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+}
+
+#album {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.photo-container {
+    position: relative;
+    width: 300px; /* Adjusted width for each photo container */
+    height: 600px; /* Adjusted height for each photo container */
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #fff;
+    border: 2px solid #ff6f91;
+}
+
+.photo-container img {
+    display: block;
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Show the full image within the container */
+    border-radius: 16px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.photo-container:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.overlay p {
+    margin: 0;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.2em;
+}
+
+.photo-container:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
